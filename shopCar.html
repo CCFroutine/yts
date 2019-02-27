@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/shopCar.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src='js/jquery-1.8.3.min.js'></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top">
+                <p>
+                    <i class="iconfont icon-jiantou_liebiaoxiangzuo"></i>
+                </p>
+                <span class="car-title">购物车</span>
+                <p class="full-title">编辑</p>
+            </div>
+            <div class="bg-car">
+                <h2>购物车</h2>
+                <p>共<span class="num">0</span>件商品</p>
+            </div>
+            <div class="login-tips">
+                <span>
+                    <i class="iconfont icon-cart1"></i>
+                    登录后可同步电脑与手机购物车中的商品
+                </span>
+                <a href="">登入</a>
+            </div>
+        </header>
+        <main>
+            <div class="noding">
+                <!-- <i class="iconfont icon-cart"></i>
+                <p>购物车里什么都没有，快去买点什么吧~</p>
+                <a href="">去逛逛</a> -->
+            </div>
+            <div class="car">
+                <div class="car-item">
+                    <div class="product">
+                        <input type="checkbox" class="shop">
+                        <div class="product-item">
+                            <a href="">
+                                <img src="images/good/130.jpg" alt="">
+                            </a>
+                            <div class="product-info">
+                                <p>
+                                    Apple iPhone X（A1865） 全网通版 银色 64GB 
+                                </p>
+                                <div class="product-price">
+                                        <p>￥ <span class="price">6099.00</span> </p>
+                                    <div>
+                                        <button class="reduce">-</button>
+                                        <input type="text" class="pro-num" value="1">
+                                        <button class="add">+</button>
+                                    </div>
+                                </div>
+                                <div>￥<span class="xiaoji">6099.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-item">
+                    <div class="product">
+                        <input type="checkbox" class="shop">
+                        <div class="product-item">
+                            <a href="">
+                                <img src="images/good/130.jpg" alt="">
+                            </a>
+                            <div class="product-info">
+                                <p>
+                                    Apple iPhone X（A1865） 全网通版 银色 64GB 
+                                </p>
+                                <div class="product-price">
+                                    <p>￥ <span class="price">6099.00</span> </p>
+                                    <div>
+                                        <button class="reduce">-</button>
+                                        <input type="text" class="pro-num" value="1">
+                                        <button class="add">+</button>
+                                    </div>
+                                </div>
+                                <div>￥<span class="xiaoji">6099.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend ">
+                <img src="images/good/为你优选.png" alt="">
+                <ul class="mt-5">
+
+                </ul>
+            </div>
+            <div class="car-total none">
+                <div class="wraper">
+                    <div class="left-all">
+                        <input type="checkbox" class="allShop">
+                        <span>全选</span>
+                    </div>
+                    <div class="total-price">
+                        <p>
+                            合计￥
+                            <span class="total">0</span>
+                        </p>
+                        <p><span class="allnumber">0</span> 件产品</p>
+                    </div>
+                    <a href="" class="settlement white">
+                        去结算
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="text/template" id="tpl">
+        <% list.forEach(function(val){ %>
+        <li class="recommend-item ">
+            <a href="">
+                <img src="<%= val.sku[0].imagePath %>" alt="">
+                <p class="mt-5"><%= val.name %></p>
+            </a>
+            <div>
+                <span><%= val.sku[0].price %></span>
+                <a href="" class="gou-car">
+                    <i class="iconfont icon-cart1"></i>
+                </a>
+            </div>
+        </li>
+        <% }) %>
+    </script>
+</body>
+<script src='js/gou.json'></script>
+<script src="js/ejs.js"></script>
+<script src='js/shopCar.js'></script>
+
+
+</html>

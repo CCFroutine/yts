@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/seek.css">
+</head>
+
+<body>
+<!-- 顶部搜索开始 -->
+    <div class="wrapper-box">
+        <div class="bargain-header">
+            <div class="wrapper">
+                <a href="" class="header-left">
+                    <i class="iconfont icon-jiantou_liebiaoxiangzuo"></i>
+                </a>
+                <div class="header-center">
+                    <a href="javascript:;">
+                        <i class="iconfont icon-sousuo"></i>
+                        <span>iPhone XS Max</span>
+                    </a>
+                </div>
+                <div class="header-right">
+                    <i class="iconfont icon-th-large icon-2"></i>
+                </div>
+            </div>
+            <ul class="wrapper-list"></ul>
+        </div>
+    </div>
+    <!-- 顶部搜索结束
+    顶部导航tab切换开始 -->
+    <div class="sord">
+        <div class="sort-item sort-option">
+            <div class="sort-item-1 sort-zong">综合</div>
+            <i class="iconfont icon-caret-down icon-1"></i>
+            <div class="f1">
+                <div class="sort-item-option sort-option1" data-num='0'>综合排序</div>
+                <div class="sort-item-option sort-option2" data-num='1'>按销量排序</div>
+            </div>
+        </div>
+        <div class="sort-item sort-list1" data-num='2'>
+            <div class="sort-item-1">价格</div>
+            <i class="iconfont icon-caret-up item-up"></i>
+            <!-- <i class="iconfont item-up item-down"></i> -->
+        </div>
+        <div class="sort-item sort-list2" data-num='3'>新品优先</div>
+        <div class="sort-item sort-screen">
+            <div>刷选</div> 
+            <i class="iconfont icon-filter-fill"></i>
+        </div>
+    </div>
+    <!-- 引用ejs -->
+    <div class="sord-show">
+       
+    </div>
+    <!-- 点击刷选遮罩层开始 -->
+    <div class="screen-box">
+        <div class="mask"></div>
+        <div class="screen">
+            <ul class="screen-scroll">
+                <li class="screen-item">
+                    <div class="screen-title">
+                        <p>价格区间</p>
+                    </div>
+                    <div class="price-section">
+                        <input type="text" placeholder="最低价" class="flex-grow">
+                        <span>-</span>
+                        <input type="text" placeholder="最高价" class="flex-grow">
+                    </div>
+                </li>
+                <li class="screen-item">
+                    <div class="screen-title">
+                        <p>分类</p>
+                    </div>
+                    <div class="price-section">
+                        <div class="section-option">手机</div>
+                        <div class="section-option">苹果保护膜</div>
+                        <div class="section-option">更多分类...</div>
+                    </div>
+                </li>
+                <li class="screen-space"></li>
+                <li class="screen-item">
+                    <div class="screen-title">
+                        <p>品牌</p>
+                    </div>
+                    <div class="price-section">
+                        <div class="section-option">苹果</div>
+                    </div>
+                </li>
+                <li class="screen-item">
+                    <div class="screen-title">
+                        <p>运行内存</p>
+                        <div class="flex-9">
+                            <p>收起</p>
+                            <i class="iconfont icon-up"></i>
+                        </div>
+                    </div>
+                    <div class="price-section ">
+                        <div class="section-option">4GB</div>
+                        <div class="section-option">6GB</div>
+                        <div class="section-option">8GB</div>
+                        <div class="section-option">1GB</div>
+                        <div class="section-option">2GB</div>
+                        <div class="section-option">3GB</div>
+                        <div class="section-option">10GB</div>
+                        <div class="section-option">12GB</div>
+                        <div class="section-option">1GB以下</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="scroll-btn">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="tpl1">
+    <% list.forEach(function(val){ %>
+     <a href="" class="list-item1">
+            <div class="item-top">
+                <img src="<%= val.imagePath %>" alt="">
+            </div>
+            <div class="item-bottom">
+                <div class="tag-title mt-5">
+                    <p><%= val.name %></p>
+                </div>
+                <ul class="tag-list mt-5">
+                    <li><%= val.tag[0] %></li>
+                    <li><%= val.tag[1] %></li>
+                    <li><%= val.tag[2] %></li>
+                    <li><%= val.tag[3] %></li>
+                </ul>
+                <div class="tab-price mt-5">
+                    <b><%= val.price %></b>
+                </div>
+                <div class="product-stage mt-5">
+                    <span class="tag-text">分期</span>
+                    <span class="tag-grey">低至￥767.00×12期</span>
+                </div>
+                <div class="mt-5">
+                    <span>5302人评价</span>
+                    <span>好评率99%</span>
+                </div>
+                <div class="link-box mt-5">
+                    <p class="">一手优品 ￥7850.00</p>
+                    <p class="">二手良品 ￥7599.00</p>
+                </div>
+            </div>
+        </a>
+        <% }) %>
+</script>
+<script type="text/template" id="tpl">
+    <% list.forEach(function(val){ %>
+    <a href="" class="show-list">
+        <div class="list-left">
+            <img src="<%= val.imagePath %>" alt="">
+        </div>
+        <div class="list-right ">
+            <div class="r-title mt-5">
+                <p><%= val.name %></p>
+            </div>
+            <div class="r-brief mt-5">
+                <ul>
+                    <li><%= val.tag[0] %></li>
+                    <li><%= val.tag[1] %></li>
+                    <li><%= val.tag[2] %></li>
+                </ul>
+            </div>
+            <div class="r-price mt-5">
+                <b><%= val.price %></b>
+            </div>
+            <div class="r-evalu mt-5">
+                <span><%= val.commentCount %></span>
+                <span>人评价</span>
+                <span>
+                    好评率
+                </span>
+                <span>
+                    <%= val.praiseRate %>
+                </span>
+            </div>
+        </div>
+    </a>
+    <% }) %>
+</script>
+<!-- <script src="js/zepto.js"></script> -->
+<script src="js/seek.json"></script>
+<script src="js/seekNew.json"></script>
+<script src="js/seekGao.json"></script>
+<script src="js/seekXiao.json"></script>
+<script src="js/seekZong.json"></script>
+<script src="js/ejs.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/seek.js"></script>
+
+</html>

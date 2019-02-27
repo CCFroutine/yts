@@ -1,0 +1,173 @@
+/*顶部搜索开始*/
+header #search {
+    display: flex;
+    height: 2.75rem;
+    align-items: center;
+    border-bottom:.01rem solid gray;
+    overflow: hidden;
+    /*background-color: rgba(250, 250, 250, 0.98);*/
+}
+header .top .left-side{
+    height: 2.75rem;
+    width: 2.75rem;
+}
+header .top .left-side a i{
+    display: flex;
+    height: 2.75rem;
+    width: 2.75rem;
+    font-size:2.5rem;
+    line-height: 2.75rem;
+    text-align: center;
+    justify-content: center;
+    /* border:.1rem solid red; */
+}
+header .top .title{
+    display: flex;
+    height: 2.56rem;
+    width: 17.74rem;
+    align-items: center;
+}
+header .top .title a.seach{
+    background: #e3e3e3;
+    border-radius: .5rem;
+    height: 2rem;
+    width: 100%;
+    padding: 0 .5rem;
+    line-height: 2rem;
+}
+header .top .title a.seach .inp{
+    background: #e3e3e3;
+    border-radius: .5rem;
+    height: 1.8rem;
+    width: 90%;
+}
+header .top .right-side{
+    height: 2.75rem;
+    width: 2.75rem;
+}
+header .top .right-side a i{
+    display: flex;
+    height: 2.75rem;
+    width: 2.75rem;
+    font-size:2rem;
+    line-height: 2.75rem;
+    text-align: center;
+    justify-content: center;
+    color:gray;
+}
+/*顶部搜索结束*/
+/*tab切换开始*/
+main{
+    width: 100%;
+}
+ /*main .sticky{
+    border-top:.01rem solid gray;
+} */
+main .border-left{
+    width: 5.89rem;
+    overflow: auto;
+    background: #fff;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+}
+main .border-left a{
+    display: block;
+    width: 100%;
+    height: 3.13rem;
+    text-align: center;
+    line-height: 3.13rem;
+    border-bottom:0.001rem  solid rgb(177, 175, 175);
+    color:black;
+}
+main .border-left .active{
+    width: 100%;
+    height: 3.13rem;
+    text-align: center;
+    line-height: 3.13rem;
+    color:red;
+    background: rgb(238, 238, 238);
+}
+
+main .cate-child {
+    overflow: auto;
+    width: 17.5rem;
+    position: absolute;
+    right: 0;
+    top:2.75rem;
+    background: rgb(238, 238, 238);
+}
+main .cate-child .cate-img{
+    display: block;
+    width: 16.5rem;
+    margin: .6rem auto 0;
+}
+main .cate-child .cate-img img{
+    vertical-align: top;
+    width: 100%;
+}
+main .cate-child .cate-item-wrap {
+    width: 16.5rem;
+    margin: 0 auto;
+}
+main .cate-child .cate-item-wrap .cate-title{
+    width: 16.5rem;
+    height: 1.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .cate-child .cate-item-wrap .cate-title p{
+    font-weight: 700;
+}
+main .cate-child .cate-item-wrap .cate-title a{
+    color:black;
+}
+main .cate-child .cate-item-wrap .cate-list{
+    width: 16.5rem;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .cate-child .cate-item-wrap .cate-list .cate-list-f1{
+    display: inline-block;
+    width: 5.43rem;
+    padding: .5rem 0;
+    text-align: center;
+}
+main .cate-child .cate-item-wrap  .cate-list-f1 img{
+    width: 4.35rem;
+}
+main .cate-child .cate-item-wrap .cate-list .cate-list-f1 span{
+    display: block;
+    color:black;
+}
+main .cate-child .cate-item-wrap .cate-gd{
+    width: 16.5rem;
+    height: 1.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .cate-child .cate-item-wrap .cate-gd p{
+    font-weight: 700;
+}
+main .cate-child .cate-item-wrap .cate-gd-list{
+    width: 16.5rem;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .cate-child .cate-item-wrap .cate-gd-list .cate-list-f2{
+    display: inline-block;
+    width: 5.43rem;
+    padding: .5rem 0;
+    text-align: center;
+}
+main .cate-child .cate-item-wrap  .cate-list-f2 img{
+    width: 4.35rem;
+}
+main .cate-child .cate-item-wrap .cate-gd-list .cate-list-f2 span{
+    color:black;
+    display: block;
+}
+/*tab切换结束
